@@ -13,8 +13,13 @@ import 'rxjs/add/operator/map';
   providedIn: 'root'
 })
 export class MapUploaderService {
+  public buildingsPerEpochMap = new Map<number, number>(); // i.e <epoch num, building count>
 
   constructor(private http: Http) {}
+
+  public addToArray(name: string, type: string, value: string) {
+
+  }
 
   public submitBuildingSearch(data): Observable <VisionResponse> {
 

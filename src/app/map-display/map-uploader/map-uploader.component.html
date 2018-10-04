@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="image">OS Image</label>
+    <input type="file" id="image" (change)="onFileChange($event)" #fileInput>      
+  </div>
+  <button type="submit" [disabled]="form.invalid || loading" class="btn btn-success">Submit
+    <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i>
+  </button>
+</form>

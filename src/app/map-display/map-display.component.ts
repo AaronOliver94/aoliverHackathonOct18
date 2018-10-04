@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './map-display.component.html',
   styleUrls: ['./map-display.component.css']
 })
-export class MapDisplayComponent implements OnInit {
+export class MapDisplayComponent {
+  private buildingsPerEpochMap = new Map<number, number>(); // i.e <epoch num, building count>
 
   constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }
